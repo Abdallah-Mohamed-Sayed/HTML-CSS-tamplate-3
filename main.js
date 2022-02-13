@@ -81,7 +81,9 @@ let started = false; // Funcion Started? No
 let float = document.querySelector("body > .float");
 
 window.onload = function () {
-  float.style.cssText = "transform: scale(0);";
+  if (window.scrollY == 0) {
+    float.style.cssText = "transform: scale(0);";
+  }
 };
 
 window.onscroll = function () {
